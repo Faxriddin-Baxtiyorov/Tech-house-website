@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHouse - Smart Home Simplified</title>
+    <meta name="description" content="Tech House offers a wide range of premium household appliances including kitchen equipment, cleaning devices, heating and cooling products, personal care electronics, and smart home solutions.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" id="mobile-menu-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="search-box desktop-search" role="search">
+                    <label for="search-input" class="sr-only">Search products</label>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                </div>
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items" style="position: relative; padding: 0.5rem; display: flex; align-items: center; justify-content: center; color: #1f2937; text-decoration: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite" style="position: absolute; top: 0; right: 0; background: #ef4444; color: white; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; transform: translate(25%, -25%);">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn" aria-label="Shopping cart, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+                </a>
+                <button class="mobile-nav-close" aria-label="Close menu" id="mobile-nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav-links" role="navigation" aria-label="Mobile navigation">
+                <a href="index.html" class="mobile-nav-link active" aria-current="page">Home</a>
+                <a href="index.html#about" class="mobile-nav-link">About Us</a>
+                <a href="catalog.html" class="mobile-nav-link">Catalog</a>
+                <a href="stores.html" class="mobile-nav-link">Stores</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </nav>
+            <div class="mobile-search">
+                <div class="search-box" role="search">
+                    <label for="mobile-search-input" class="sr-only">Search products</label>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="mobile-search-input" placeholder="Search products..." aria-label="Search products">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge badge-primary">New for 2026</span>
+                    <h1 class="hero-title">Smart Home <br><span class="text-accent">Simplified.</span></h1>
+                    <p class="hero-description">Tech House offers a wide range of premium household appliances including kitchen equipment, cleaning devices, heating and cooling products, personal care electronics, and smart home solutions. Fast delivery and professional installation available.</p>
+                    <div class="hero-buttons">
+                        <a href="catalog.html" class="btn btn-primary">
+                            Browse Catalog
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#membership" class="btn btn-secondary">Join Rewards</a>
+                    </div>
+                </div>
+                <div style="width: 500px;" class="hero-image">
+                    <img src="https://marketplace.canva.com/EAGR4J_-jYM/2/0/1600w/canva-colorful-abstract-online-shop-free-logo-zxo07UzxTDw.jpg"  alt="Hero">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="featured" style="background: #f9fafb; padding: 5rem 1rem; scroll-margin-top: 5rem;">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto; text-align: center;" class="about-content-grid">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin-bottom: 2rem;">About Tech House</h2>
+                    <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Tech House has been providing high-quality household appliances since 1995. We specialize in kitchen equipment, cleaning devices, heating and cooling products, personal care electronics, and smart home appliances.
+                    </p>
+                    <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.8; margin-bottom: 0;">
+                        All products come with comprehensive warranties and our dedicated after-sales support team is here to help you every step of the way.
+                    </p>
+                </div>
+                <!-- Features Cards -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;" class="about-features-grid">
+                    <div style="padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-bottom: 1rem; margin-left: auto; margin-right: auto;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <h3 style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem;">Store Locations</h3>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Visit us in-store or order online</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-bottom: 1rem; margin-left: auto; margin-right: auto;">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <h3 style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem;">24/7 Support</h3>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Expert customer service always available</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-bottom: 1rem; margin-left: auto; margin-right: auto;">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                        <h3 style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem;">2-Year Warranty</h3>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Comprehensive coverage on all products</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-bottom: 1rem; margin-left: auto; margin-right: auto;">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <h3 style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem;">Fast Delivery</h3>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Home delivery or in-store pickup</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Products -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Trending Products</h2>
+                <div class="products-grid" data-product-type="trending">
+                    <!-- Product 1 -->
+                    <article class="card product-card" data-product-id="1" data-trending="true">
+                        <a href="product-detail.html?id=1" class="product-image">
+                            <img src="https://api.cabinet.smart-market.uz/uploads/images/ff8081816dae8b8ecb70f9af" alt="SmartChef Pro Oven">
+                            <span class="product-badge trending-badge">Trending</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">SmartChef Pro Oven</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£899.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£1,199.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add SmartChef Pro Oven to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="card product-card" data-product-id="2" data-trending="true">
+                        <a href="product-detail.html?id=2" class="product-image">
+                            <img src="https://www.gutterprovac.com/cdn/shop/files/ccp60-3.webp?v=1758774790" alt="UltraClean Pro Vacuum">
+                            <span class="product-badge trending-badge">Trending</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">UltraClean Pro Vacuum</h3>
+                            <div class="product-footer">
+                                <span class="product-price">£349.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add UltraClean Pro Vacuum to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="card product-card" data-product-id="3" data-trending="true">
+                        <a href="product-detail.html?id=3" class="product-image">
+                            <img src="https://www.bresser.com/media/3f/03/67/1701971857/7003700_M_1_v0523.jpg?ts=1763163658" alt="AirPure Climate Station">
+                            <span class="product-badge trending-badge">Trending</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">AirPure Climate Station</h3>
+                            <div class="product-footer">
+                                <span class="product-price">£449.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add AirPure Climate Station to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="card product-card" data-product-id="4" data-trending="true">
+                        <a href="product-detail.html?id=4" class="product-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA11kOgN-XJs2TnIoGfFOPD_wXW3iLyyJrQg&s" alt="PressoPro Espresso Machine">
+                            <span class="product-badge trending-badge">Trending</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">PressoPro Espresso Machine</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£599.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£799.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add PressoPro Espresso Machine to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="card product-card" data-product-id="9" data-trending="true">
+                        <a href="product-detail.html?id=9" class="product-image">
+                            <img src="https://olcha.uz/image/original/products/MX3YDhmpd2Hw1ClfsjAmuZkKpLMBodpEluWv6PILrnUpWNuIOfjoGGVAX4AQ.jpg" alt="ChillMaster Refrigerator">
+                            <span class="product-badge trending-badge">Trending</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">ChillMaster Refrigerator</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£1,299.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£1,499.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add ChillMaster Refrigerator to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discount Products -->
+        <section class="featured" style="background: #f9fafb;">
+            <div class="container">
+                <h2 class="section-title">Special Discounts</h2>
+                <div class="products-grid" data-product-type="discount">
+                    <!-- Discount Product 1 -->
+                    <article class="card product-card" data-product-id="5" data-discount="true">
+                        <a href="product-detail.html?id=5" class="product-image">
+                            <img src="https://www.sunbeam.ca/on/demandware.static/-/Sites-master-catalog/default/dw91051df5/images/highres/2379-33A-1.jpg" alt="MixMaster Pro Stand Mixer">
+                            <span class="product-badge" style="background: #ef4444;">-25%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">MixMaster Pro Stand Mixer</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£299.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£399.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add MixMaster Pro Stand Mixer to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Discount Product 2 -->
+                    <article class="card product-card" data-product-id="6" data-discount="true">
+                        <a href="product-detail.html?id=6" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=400&fit=crop" alt="WaveTech Microwave">
+                            <span class="product-badge" style="background: #ef4444;">-30%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">WaveTech Microwave</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£174.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£249.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add WaveTech Microwave to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Discount Product 3 -->
+                    <article class="card product-card" data-product-id="7" data-discount="true">
+                        <a href="product-detail.html?id=7" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=400&fit=crop" alt="SteamClean Pro">
+                            <span class="product-badge" style="background: #ef4444;">-20%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">SteamClean Pro</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£159.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£199.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add SteamClean Pro to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Discount Product 4 -->
+                    <article class="card product-card" data-product-id="8" data-discount="true">
+                        <a href="product-detail.html?id=8" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop" alt="TrimPro Electric Trimmer">
+                            <span class="product-badge" style="background: #ef4444;">-15%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Personal Care</span>
+                            <h3 class="product-name">TrimPro Electric Trimmer</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£67.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£79.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add TrimPro Electric Trimmer to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Discount Product 5 -->
+                    <article class="card product-card" data-product-id="10" data-discount="true">
+                        <a href="product-detail.html?id=10" class="product-image">
+                            <img src="https://assets.chakana.uz/product/main_image/mobile/67232b00933db.png" alt="WashMax Pro Washing Machine">
+                            <span class="product-badge" style="background: #ef4444;">-20%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">WashMax Pro Washing Machine</h3>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£639.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.875rem; margin-left: 0.5rem;">£799.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add WashMax Pro Washing Machine to cart">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="featured" style="padding: 5rem 1rem;">
+            <div class="container">
+                <h2 class="section-title">Why Choose Tech House?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="card" style="padding: 2rem; text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-weight: 700; margin-bottom: 1rem;">Quality Guaranteed</h3>
+                        <p style="color: #6b7280; line-height: 1.6;">All our products undergo rigorous quality testing. We offer a comprehensive 2-year warranty on all appliances.</p>
+                    </div>
+                    <div class="card" style="padding: 2rem; text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-weight: 700; margin-bottom: 1rem;">Fast & Free Delivery</h3>
+                        <p style="color: #6b7280; line-height: 1.6;">Free standard delivery on orders over £50. Express delivery available. In-store pickup option for immediate collection.</p>
+                    </div>
+                    <div class="card" style="padding: 2rem; text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-weight: 700; margin-bottom: 1rem;">Expert Support</h3>
+                        <p style="color: #6b7280; line-height: 1.6;">Our dedicated customer service team is available 24/7 via phone, chat, or email to assist with any queries.</p>
+                    </div>
+                    <div class="card" style="padding: 2rem; text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 style="font-weight: 700; margin-bottom: 1rem;">Loyalty Rewards</h3>
+                        <p style="color: #6b7280; line-height: 1.6;">Join our rewards program and earn points on every purchase. Unlock exclusive discounts and benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section (on Home Page) -->
+        <section id="membership" class="membership-section" style="background: #f9fafb; scroll-margin-top: 5rem;">
+            <div class="container">
+                <div class="membership-header">
+                    <h2 class="section-title">Join Our Rewards Program</h2>
+                    <p class="membership-description">Choose a membership tier that suits your needs and start earning rewards today.</p>
+                </div>
+                <div class="membership-grid">
+                    <!-- Bronze -->
+                    <div class="card membership-card">
+                        <div class="membership-icon" style="background: #ea580c;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="membership-name">Bronze</h3>
+                        <p class="membership-price">Free</p>
+                        <ul class="membership-benefits">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Basic loyalty points
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Access to selected discounts
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Standard delivery options
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary btn-full">Join Bronze</button>
+                    </div>
+
+                    <!-- Silver -->
+                    <div class="card membership-card">
+                        <div class="membership-icon" style="background: #9ca3af;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="membership-name">Silver</h3>
+                        <p class="membership-price">£4.99/mo</p>
+                        <ul class="membership-benefits">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Increased loyalty points
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Priority customer support
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Monthly exclusive offers
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary btn-full">Join Silver</button>
+                    </div>
+
+                    <!-- Gold -->
+                    <div class="card membership-card">
+                        <div class="membership-icon" style="background: #eab308;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="membership-name">Gold</h3>
+                        <p class="membership-price">£9.99/mo</p>
+                        <ul class="membership-benefits">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Highest loyalty rewards
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Free delivery
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Early access to new products
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary btn-full">Join Gold</button>
+                    </div>
+
+                    <!-- Platinum -->
+                    <div class="card membership-card" style="border: 2px solid #a855f7; position: relative;">
+                        <div style="position: absolute; top: -12px; right: 20px; background: #a855f7; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Premium</div>
+                        <div class="membership-icon" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="membership-name">Platinum</h3>
+                        <p class="membership-price">£19.99/mo</p>
+                        <ul class="membership-benefits">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Maximum loyalty rewards (2x points)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Free express delivery
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                VIP customer support (24/7 priority)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Exclusive early access & previews
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Special discounts up to 30%
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                Extended warranty coverage
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);">Join Platinum</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">Shipping FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

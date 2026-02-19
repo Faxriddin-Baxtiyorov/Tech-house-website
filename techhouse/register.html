@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - TechHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <section class="auth-section">
+            <div class="container-small">
+                <div class="auth-card">
+                    <h1>Create Account</h1>
+                    <p>Join Tech House and start earning rewards</p>
+                    
+                    <form class="auth-form" id="register-form" aria-label="Registration form">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" class="input" placeholder="John" required aria-required="true">
+
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" class="input" placeholder="Doe" required aria-required="true">
+
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" class="input" placeholder="your.email@example.com" required aria-required="true">
+
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" class="input" placeholder="Choose a username" required aria-required="true">
+
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" class="input" placeholder="Minimum 8 characters" required aria-required="true" minlength="8">
+
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="input" placeholder="Re-enter your password" required aria-required="true">
+
+                        <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; margin-top: 0.5rem;">
+                            <input type="checkbox" required style="width: auto; margin-top: 0.25rem;">
+                            <span style="font-size: 0.875rem;">I agree to the <a href="policies.html" style="color: #2563eb;">Terms & Conditions</a> and <a href="policies.html" style="color: #2563eb;">Privacy Policy</a></span>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+
+                    <button class="btn btn-secondary btn-full" style="margin-bottom: 1.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                        Sign up with Google
+                    </button>
+
+                    <div class="auth-link">
+                        Already have an account? <a href="login.html">Sign in here</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('reg-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const username = document.getElementById('reg-username').value.trim();
+            
+            if (password !== confirmPassword) {
+                if (typeof showNotification === 'function') {
+                    showNotification('Passwords do not match');
+                } else {
+                    alert('Passwords do not match');
+                }
+                return;
+            }
+            
+            if (!firstName || !lastName || !email || !username) {
+                if (typeof showNotification === 'function') {
+                    showNotification('Please fill in all fields');
+                } else {
+                    alert('Please fill in all fields');
+                }
+                return;
+            }
+            
+            const userData = {
+                name: `${firstName} ${lastName}`,
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                username: username,
+                createdAt: new Date().toISOString()
+            };
+            
+            localStorage.setItem('user', JSON.stringify(userData));
+            
+            if (typeof showNotification === 'function') {
+                showNotification('Account created successfully! Redirecting...');
+            } else {
+                alert('Account created successfully!');
+            }
+            
+            // Update header
+            if (typeof updateHeaderLoginStatus === 'function') {
+                updateHeaderLoginStatus();
+            }
+            
+            // Check for redirect
+            const redirect = localStorage.getItem('auth_redirect');
+            localStorage.removeItem('auth_redirect');
+            
+            setTimeout(() => {
+                if (redirect === 'checkout') {
+                    window.location.href = 'checkout.html';
+                } else {
+                    window.location.href = 'profile.html';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

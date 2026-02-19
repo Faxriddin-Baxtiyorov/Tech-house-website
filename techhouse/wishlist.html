@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - TechHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box desktop-search" role="search">
+                    <label for="search-input" class="sr-only">Search products</label>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                </div>
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn" aria-label="Shopping cart, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <section class="cart-section">
+            <div class="container-small">
+                <h1 class="page-title">My Wishlist</h1>
+
+                <!-- Wishlist Items -->
+                <div class="cart-items" id="wishlist-items-container">
+                    <!-- Wishlist items will be loaded dynamically -->
+                </div>
+
+                <div id="wishlist-empty" style="text-align: center; padding: 4rem 1rem; display: none;">
+                    <div style="width: 120px; height: 120px; margin: 0 auto 2rem; background: #f3f4f6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #9ca3af;">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h2 style="color: #1f2937; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Your wishlist is empty</h2>
+                    <p style="color: #6b7280; font-size: 1rem; margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">Start adding products you love to your wishlist and they'll appear here</p>
+                    <a href="catalog.html" class="btn btn-primary">Browse Products</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function loadWishlistItems() {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            const container = document.getElementById('wishlist-items-container');
+            const emptyState = document.getElementById('wishlist-empty');
+            
+            // Update wishlist count in header
+            if (typeof updateWishlistCount === 'function') {
+                updateWishlistCount();
+            }
+            
+            if (wishlist.length === 0) {
+                container.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            emptyState.style.display = 'none';
+            
+            // Escape HTML to prevent XSS
+            const escapeHtml = (text) => {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            };
+            
+            container.innerHTML = wishlist.map(item => {
+                const escapedName = escapeHtml(item.name);
+                const escapedPrice = escapeHtml(item.price);
+                const escapedImage = escapeHtml(item.image);
+                const escapedId = escapeHtml(item.id);
+                
+                return `
+                <div class="cart-item" data-product-id="${escapedId}">
+                    <a href="product-detail.html" class="cart-item-image">
+                        <img src="${escapedImage}" alt="${escapedName}" onerror="this.src='https://via.placeholder.com/150?text=No+Image'">
+                    </a>
+                    <div class="cart-item-info">
+                        <h3 class="cart-item-name">${escapedName}</h3>
+                        <p class="cart-item-price">${escapedPrice}</p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <button class="btn btn-primary" onclick="addToCart('${escapedId}', '${escapedName.replace(/'/g, "\\'")}', '${escapedPrice}', '${escapedImage}'); if(typeof showNotification === 'function') showNotification('Added to cart');">
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary" onclick="removeFromWishlist('${escapedId}'); loadWishlistItems(); updateWishlistCount();" style="margin-top: 0.5rem;">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+        
+        // Make function global
+        window.loadWishlistItems = loadWishlistItems;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadWishlistItems();
+            
+            // Listen for storage changes to update wishlist when items are added from other pages
+            window.addEventListener('storage', () => {
+                loadWishlistItems();
+            });
+        });
+    </script>
+</body>
+</html>

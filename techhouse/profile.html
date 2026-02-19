@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - TechHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <section class="profile-section">
+            <div class="container-small">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <span id="avatar-initial">JD</span>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="profile-name">John Doe</h2>
+                        <p id="profile-email">john.doe@example.com</p>
+                        <p style="color: #2563eb; font-weight: 600; margin-top: 0.5rem;">Gold Member</p>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="overview">Overview</button>
+                    <button class="profile-tab" data-tab="orders">My Orders</button>
+                    <button class="profile-tab" data-tab="addresses">Addresses</button>
+                    <button class="profile-tab" data-tab="settings">Settings</button>
+                </div>
+
+                <div class="profile-content">
+                    <!-- Overview Tab -->
+                    <div class="profile-tab-content active" id="overview-tab">
+                        <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Account Overview</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                            <div class="card" style="padding: 1.5rem;">
+                                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Loyalty Points</p>
+                                <p style="font-size: 2rem; font-weight: 700; color: #2563eb;">2,450</p>
+                            </div>
+                            <div class="card" style="padding: 1.5rem;">
+                                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Total Orders</p>
+                                <p style="font-size: 2rem; font-weight: 700; color: #2563eb;">12</p>
+                            </div>
+                            <div class="card" style="padding: 1.5rem;">
+                                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Membership</p>
+                                <p style="font-size: 1.25rem; font-weight: 700; color: #eab308;">Gold</p>
+                            </div>
+                        </div>
+                        <h4 style="font-weight: 700; margin-bottom: 1rem;">Recent Orders</h4>
+                        <div class="card" style="padding: 1.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <p style="font-weight: 600;">Order #12345</p>
+                                    <p style="color: #6b7280; font-size: 0.875rem;">2 items • £1,249.98</p>
+                                </div>
+                                <span class="badge badge-primary">Delivered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Tab -->
+                    <div class="profile-tab-content" id="orders-tab">
+                        <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Order History</h3>
+                        <div class="card" style="padding: 1.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <p style="font-weight: 600;">Order #12345</p>
+                                    <p style="color: #6b7280; font-size: 0.875rem;">Placed on Jan 15, 2024</p>
+                                </div>
+                                <span class="badge badge-primary">Delivered</span>
+                            </div>
+                            <div style="border-top: 1px solid #e5e7eb; padding-top: 1rem;">
+                                <p style="margin-bottom: 0.5rem;">SmartChef Pro Oven × 1</p>
+                                <p style="margin-bottom: 0.5rem;">UltraClean Pro Vacuum × 1</p>
+                                <p style="font-weight: 600; margin-top: 1rem;">Total: £1,249.98</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Tab -->
+                    <div class="profile-tab-content" id="addresses-tab">
+                        <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Saved Addresses</h3>
+                        <div class="card" style="padding: 1.5rem; margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Home Address</p>
+                                    <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6;">
+                                        123 Main Street<br>
+                                        London, E1 4PX<br>
+                                        United Kingdom
+                                    </p>
+                                </div>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">Edit</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add New Address</button>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="profile-tab-content" id="settings-tab">
+                        <h3 style="font-weight: 700; margin-bottom: 1.5rem;">Account Settings</h3>
+                        <form class="auth-form">
+                            <label for="edit-name">Full Name</label>
+                            <input type="text" id="edit-name" class="input" value="John Doe">
+
+                            <label for="edit-email">Email Address</label>
+                            <input type="email" id="edit-email" class="input" value="john.doe@example.com">
+
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" class="input" placeholder="Enter current password">
+
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" class="input" placeholder="Enter new password">
+
+                            <button type="submit" class="btn btn-primary btn-full">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load user data
+        document.addEventListener('DOMContentLoaded', () => {
+            const userStr = localStorage.getItem('user');
+            if (!userStr) {
+                // Redirect to login if no user
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            try {
+                const user = JSON.parse(userStr);
+                
+                if (user.name) {
+                    const nameEl = document.getElementById('profile-name');
+                    const avatarEl = document.getElementById('avatar-initial');
+                    if (nameEl) nameEl.textContent = user.name;
+                    if (avatarEl) {
+                        const initials = user.name.split(' ').map(n => n[0]).join('').toUpperCase();
+                        avatarEl.textContent = initials;
+                    }
+                } else {
+                    // Redirect if no name
+                    window.location.href = 'login.html';
+                    return;
+                }
+                
+                if (user.email) {
+                    const emailEl = document.getElementById('profile-email');
+                    const editEmail = document.getElementById('edit-email');
+                    if (emailEl) emailEl.textContent = user.email;
+                    if (editEmail) editEmail.value = user.email;
+                }
+                
+                const editName = document.getElementById('edit-name');
+                if (editName && user.name) editName.value = user.name;
+            } catch (e) {
+                console.error('Error loading user data:', e);
+                window.location.href = 'login.html';
+            }
+
+            // Tab switching
+            document.querySelectorAll('.profile-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.profile-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.profile-tab-content').forEach(c => c.classList.remove('active'));
+                    tab.classList.add('active');
+                    const tabContent = document.getElementById(tab.dataset.tab + '-tab');
+                    if (tabContent) tabContent.classList.add('active');
+                });
+            });
+
+            // Save profile changes
+            const settingsForm = document.querySelector('#settings-tab form');
+            if (settingsForm) {
+                settingsForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const updatedUser = {
+                        name: document.getElementById('edit-name').value,
+                        email: document.getElementById('edit-email').value
+                    };
+                    localStorage.setItem('user', JSON.stringify(updatedUser));
+                    
+                    const nameEl = document.getElementById('profile-name');
+                    const emailEl = document.getElementById('profile-email');
+                    const avatarEl = document.getElementById('avatar-initial');
+                    
+                    if (nameEl) nameEl.textContent = updatedUser.name;
+                    if (emailEl) emailEl.textContent = updatedUser.email;
+                    if (avatarEl) {
+                        const initials = updatedUser.name.split(' ').map(n => n[0]).join('').toUpperCase();
+                        avatarEl.textContent = initials;
+                    }
+                    
+                    if (typeof showNotification === 'function') {
+                        showNotification('Profile updated successfully!');
+                    } else {
+                        alert('Profile updated successfully!');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

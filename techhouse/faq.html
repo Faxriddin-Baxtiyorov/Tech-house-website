@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TechHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box desktop-search" role="search">
+                    <label for="search-input" class="sr-only">Search products</label>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                </div>
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <section class="contact-section">
+            <div class="container-medium">
+                <h1 class="page-title">Frequently Asked Questions</h1>
+                <p class="contact-description" style="text-align: center; margin-bottom: 3rem;">
+                    Find answers to common questions about our products, services, and policies.
+                </p>
+
+                <div class="faq-container">
+                    <!-- Delivery & Shipping -->
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem;">Delivery & Shipping</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does delivery take?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standard delivery takes 2-3 business days for orders over £50 (free) or £4.99 for smaller orders. Express next-day delivery is available for £9.99. Gold members receive free delivery on all orders.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I collect my order from a store?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! You can choose in-store collection at checkout. Items are typically ready for pickup within 2 hours of order confirmation. Collection is free of charge at any of our 5 store locations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you deliver internationally?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, we deliver within the United Kingdom only. We're working on expanding our delivery network to other countries in the future.</p>
+                        </div>
+                    </div>
+
+                    <!-- Returns & Warranty -->
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem;">Returns & Warranty</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your return policy?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day money-back guarantee. Items must be in original packaging and unused condition. Bronze members get 30-day returns, Silver members get 45 days, and Gold members get 60 days.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What warranty do products come with?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All products come with a comprehensive 2-year warranty covering manufacturing defects and faults. Gold and Platinum members can extend their warranty for free or at discounted rates.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I return an item?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can initiate a return through your account profile, contact our customer service team, or visit any of our stores. We'll provide a prepaid return label for your convenience.</p>
+                        </div>
+                    </div>
+
+                    <!-- Products & Services -->
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem;">Products & Services</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer installation services?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer professional installation services for large appliances. Silver members receive free installation, while standard installation fees apply for other customers. Contact us for a quote.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are your products energy efficient?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We prioritize energy-efficient products. Most of our appliances have A+++ energy ratings, helping you save on utility bills while reducing your carbon footprint.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you have smart home compatible products?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We have a wide range of smart home appliances that can be controlled via smartphone apps and voice assistants. Check our Smart Home category for all compatible products.</p>
+                        </div>
+                    </div>
+
+                    <!-- Membership & Rewards -->
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem;">Membership & Rewards</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I join the rewards program?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can join our Bronze membership for free by creating an account. Silver (£4.99/mo) and Gold (£9.99/mo) memberships offer additional benefits. Visit our Rewards page to learn more.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do loyalty points work?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You earn points on every purchase: Bronze members earn 1 point per £1, Silver members earn 1.5 points per £1, and Gold members earn 2 points per £1. Points can be redeemed for discounts on future purchases.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I cancel my membership?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can cancel your Silver or Gold membership at any time through your account settings. You'll retain access until the end of your current billing period.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment & Orders -->
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem;">Payment & Orders</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit and debit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. Business customers can arrange invoice payments.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I track my order?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Once your order is confirmed, you'll receive a tracking number via email. You can track your order status in your account profile or by contacting customer service.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if my product arrives damaged?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If your product arrives damaged, please contact us immediately within 48 hours. We'll arrange a replacement or full refund at no cost to you. Take photos of the damage for our records.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #eff6ff; border-radius: 1rem;">
+                    <h3 style="font-weight: 700; margin-bottom: 1rem;">Still have questions?</h3>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Our customer service team is here to help 24/7</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Support</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

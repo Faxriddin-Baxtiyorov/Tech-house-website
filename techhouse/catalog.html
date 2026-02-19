@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - TechHouse</title>
+    <meta name="description" content="Browse our complete catalog of household appliances including kitchen equipment, cleaning devices, heating and cooling products, personal care electronics, and smart home solutions.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Tech<span class="logo-accent">House</span></span>
+            </a>
+
+            <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About Us</a>
+                <a href="catalog.html" class="nav-link active" aria-current="page">Catalog</a>
+                <a href="stores.html" class="nav-link">Stores</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box desktop-search" role="search">
+                    <label for="search-input-catalog" class="sr-only">Search products</label>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="search-input-catalog" placeholder="Search products..." aria-label="Search products">
+                </div>
+                <a href="login.html" id="login-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Login</a>
+                <a href="profile.html" id="profile-btn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem; display: none;">Profile</a>
+                <a href="wishlist.html" class="wishlist-btn-header" aria-label="Wishlist, 0 items">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="wishlist-count" aria-live="polite">0</span>
+                </a>
+                <a href="basket.html" class="cart-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 250px 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 1.5rem;">Filters</h3>
+                        
+                        <!-- Price Filter -->
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="filter-option">
+                                <input type="radio" id="price-all" name="price" value="all" checked>
+                                <label for="price-all">All Prices</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="price-0-100" name="price" value="0-100">
+                                <label for="price-0-100">£0 - £100</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="price-100-300" name="price" value="100-300">
+                                <label for="price-100-300">£100 - £300</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="price-300-600" name="price" value="300-600">
+                                <label for="price-300-600">£300 - £600</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="price-600" name="price" value="600-999999">
+                                <label for="price-600">£600+</label>
+                            </div>
+                        </div>
+
+                        <!-- Size Filter -->
+                        <div class="filter-group">
+                            <h4>Size</h4>
+                            <div class="filter-option">
+                                <input type="checkbox" id="size-compact" value="compact">
+                                <label for="size-compact">Compact</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="size-medium" value="medium">
+                                <label for="size-medium">Medium</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="size-large" value="large">
+                                <label for="size-large">Large</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="size-extra-large" value="extra-large">
+                                <label for="size-extra-large">Extra Large</label>
+                            </div>
+                        </div>
+
+                        <!-- Quality Filter -->
+                        <div class="filter-group">
+                            <h4>Quality Rating</h4>
+                            <div class="filter-option">
+                                <input type="checkbox" id="quality-premium" value="premium">
+                                <label for="quality-premium">Premium</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="quality-standard" value="standard">
+                                <label for="quality-standard">Standard</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="quality-budget" value="budget">
+                                <label for="quality-budget">Budget</label>
+                            </div>
+                        </div>
+
+                        <!-- Energy Rating -->
+                        <div class="filter-group">
+                            <h4>Energy Rating</h4>
+                            <div class="filter-option">
+                                <input type="checkbox" id="energy-a+++" value="A+++">
+                                <label for="energy-a+++">A+++</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="energy-a++" value="A++">
+                                <label for="energy-a++">A++</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="energy-a+" value="A+">
+                                <label for="energy-a+">A+</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-secondary btn-full" onclick="clearFilters()" style="margin-top: 1rem;">Clear Filters</button>
+                    </aside>
+
+                    <!-- Products Content -->
+                    <div>
+                <div class="products-header">
+                    <div>
+                        <h1 class="page-title">Product Catalog</h1>
+                        <p class="products-count">Browse our wide range of household appliances</p>
+                    </div>
+                    <div class="category-filters" role="tablist" aria-label="Product categories">
+                        <button class="category-btn active" role="tab" aria-selected="true" aria-controls="products-grid">All</button>
+                        <button class="category-btn" role="tab" aria-selected="false" aria-controls="products-grid">Kitchen</button>
+                        <button class="category-btn" role="tab" aria-selected="false" aria-controls="products-grid">Cleaning</button>
+                        <button class="category-btn" role="tab" aria-selected="false" aria-controls="products-grid">Heating & Cooling</button>
+                        <button class="category-btn" role="tab" aria-selected="false" aria-controls="products-grid">Personal Care</button>
+                        <button class="category-btn" role="tab" aria-selected="false" aria-controls="products-grid">Smart Home</button>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="products-grid" role="list">
+                    <!-- Product 1 -->
+                    <article class="card product-card" role="listitem" data-product-id="smartchef-pro-oven">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://api.cabinet.smart-market.uz/uploads/images/ff8081816dae8b8ecb70f9af" alt="SmartChef Pro Oven" onerror="this.src='https://images.unsplash.com/photo-1556912173-46e1c8c42622?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">SmartChef Pro Oven</h3>
+                            <p class="product-description">AI-powered convection oven with recipe assistance and remote monitoring. Perfect for modern kitchens.</p>
+                            <div class="product-footer">
+                                <span class="product-price">£899.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="card product-card" role="listitem" data-product-id="ultraclean-pro-vacuum">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://www.gutterprovac.com/cdn/shop/files/ccp60-3.webp?v=1758774790" alt="UltraClean Pro Vacuum" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">UltraClean Pro Vacuum</h3>
+                            <p class="product-description">Cordless robot vacuum with smart dust detection and self-cleaning</p>
+                            <div class="product-footer">
+                                <span class="product-price">£349.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="card product-card" role="listitem" data-product-id="airpure-climate-station">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://www.bresser.com/media/3f/03/67/1701971857/7003700_M_1_v0523.jpg?ts=1763163658" alt="AirPure Climate Station" onerror="this.src='https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">AirPure Climate Station</h3>
+                            <p class="product-description">Smart air purifier with real-time pollution monitoring and voice control</p>
+                            <div class="product-footer">
+                                <span class="product-price">£449.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="card product-card" role="listitem" data-product-id="pressopro-espresso-machine">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=400&fit=crop" alt="PressoPro Espresso Machine">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">PressoPro Espresso Machine</h3>
+                            <p class="product-description">Professional espresso machine with automatic milk frothing function</p>
+                            <div class="product-footer">
+                                <span class="product-price">£599.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="card product-card" role="listitem" data-product-id="chillmaster-refrigerator">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://olcha.uz/image/original/products/MX3YDhmpd2Hw1ClfsjAmuZkKpLMBodpEluWv6PILrnUpWNuIOfjoGGVAX4AQ.jpg" alt="ChillMaster Refrigerator" onerror="this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">ChillMaster Refrigerator</h3>
+                            <p class="product-description">French door smart refrigerator with built-in camera and mobile app control</p>
+                            <div class="product-footer">
+                                <span class="product-price">£1,299.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="card product-card" role="listitem" data-product-id="washmax-pro-washing-machine">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://assets.chakana.uz/product/main_image/mobile/67232b00933db.png" alt="WashMax Pro Washing Machine" onerror="this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">WashMax Pro Washing Machine</h3>
+                            <p class="product-description">Front-loading washing machine with steam cleaning and quick wash</p>
+                            <div class="product-footer">
+                                <span class="product-price">£799.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article class="card product-card" role="listitem" data-product-id="climatecomfort-air-conditioner">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://ir.ozone.ru/s3/multimedia-1-4/c1000/7148551360.jpg" alt="ClimateComfort Air Conditioner" onerror="this.src='https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">ClimateComfort Air Conditioner</h3>
+                            <p class="product-description">Inverter air conditioner with sleep mode and energy-saving features</p>
+                            <div class="product-footer">
+                                <span class="product-price">£649.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 8 -->
+                    <article class="card product-card" role="listitem" data-product-id="haircare-pro-hair-dryer">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://frankfurt.apollo.olxcdn.com/v1/files/til0jqdmp2es2-UZ/image;s=1536x1024" alt="HairCare Pro Hair Dryer" onerror="this.src='https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Personal Care</span>
+                            <h3 class="product-name">HairCare Pro Hair Dryer</h3>
+                            <p class="product-description">Ionic hair dryer with smart heat control and 3 speed settings</p>
+                            <div class="product-footer">
+                                <span class="product-price">£129.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 9 -->
+                    <article class="card product-card" role="listitem" data-product-id="smarthome-hub-pro">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://www.smarthome.com.au/wp-content/uploads/2023/04/homey-pro-1.jpg" alt="SmartHome Hub Pro" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Smart Home</span>
+                            <h3 class="product-name">SmartHome Hub Pro</h3>
+                            <p class="product-description">Central control hub for all smart home devices with voice assistant</p>
+                            <div class="product-footer">
+                                <span class="product-price">£199.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 10 -->
+                    <article class="card product-card" role="listitem" data-product-id="blendpro-blender">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/81mJctIXDdL.jpg" alt="BlendPro Blender" onerror="this.src='https://images.unsplash.com/photo-1556912173-46e1c8c42622?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">BlendPro Blender</h3>
+                            <p class="product-description">High-powered blender with 10 speed settings and pulse function</p>
+                            <div class="product-footer">
+                                <span class="product-price">£149.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 11 -->
+                    <article class="card product-card" role="listitem" data-product-id="steam-iron-elite">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://olcha.uz/image/700x700/products/IqVRnsOjAZJPqBIed44SL9eAQWyQXWI4WXuz7Vag7g5f3e5jRQr68qqI8akG.jpg" alt="Steam Iron Elite" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">Steam Iron Elite</h3>
+                            <p class="product-description">Professional steam iron with ceramic soleplate and auto shut-off</p>
+                            <div class="product-footer">
+                                <span class="product-price">£89.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 12 -->
+                    <article class="card product-card" role="listitem" data-product-id="heatermax-pro-heater">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://minapi.beemarket.uz/prod-media/productImages/17579249222L8eYP2K7vyD.webp" alt="HeaterMax Pro Heater" onerror="this.src='https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop'">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">HeaterMax Pro Heater</h3>
+                            <p class="product-description">Electric heater with digital thermostat and remote control</p>
+                            <div class="product-footer">
+                                <span class="product-price">£179.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 13 - Mixer -->
+                    <article class="card product-card" role="listitem" data-product-id="mixmaster-pro-stand-mixer">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://www.sunbeam.ca/on/demandware.static/-/Sites-master-catalog/default/dw91051df5/images/highres/2379-33A-1.jpg" alt="MixMaster Pro Stand Mixer">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">MixMaster Pro Stand Mixer</h3>
+                            <p class="product-description">Professional stand mixer with 10-speed control and multiple attachments</p>
+                            <div class="product-footer">
+                                <span class="product-price">£399.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 14 - Microwave -->
+                    <article class="card product-card" role="listitem" data-product-id="wavetech-microwave">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=400&fit=crop" alt="WaveTech Microwave">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">WaveTech Microwave</h3>
+                            <p class="product-description">Smart microwave with sensor cooking and convection technology</p>
+                            <div class="product-footer">
+                                <span class="product-price">£249.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 15 - Steam Cleaner -->
+                    <article class="card product-card" role="listitem" data-product-id="steamclean-pro">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=400&fit=crop" alt="SteamClean Pro">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">SteamClean Pro</h3>
+                            <p class="product-description">High-pressure steam cleaner for deep sanitization and cleaning</p>
+                            <div class="product-footer">
+                                <span class="product-price">£199.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 16 - Fan -->
+                    <article class="card product-card" role="listitem" data-product-id="coolbreeze-tower-fan">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop" alt="CoolBreeze Tower Fan">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">CoolBreeze Tower Fan</h3>
+                            <p class="product-description">Oscillating tower fan with remote control and timer function</p>
+                            <div class="product-footer">
+                                <span class="product-price">£89.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 17 - Trimmer -->
+                    <article class="card product-card" role="listitem" data-product-id="trimpro-electric-trimmer">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop" alt="TrimPro Electric Trimmer">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Personal Care</span>
+                            <h3 class="product-name">TrimPro Electric Trimmer</h3>
+                            <p class="product-description">Cordless electric trimmer with multiple length settings and waterproof design</p>
+                            <div class="product-footer">
+                                <span class="product-price">£79.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 18 - Smart Thermostat -->
+                    <article class="card product-card" role="listitem" data-product-id="smartthermo-pro">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" alt="SmartThermo Pro">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Smart Home</span>
+                            <h3 class="product-name">SmartThermo Pro</h3>
+                            <p class="product-description">Wi-Fi enabled smart thermostat with learning capabilities and app control</p>
+                            <div class="product-footer">
+                                <span class="product-price">£249.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggested Products Section -->
+        <section class="featured" style="background: #f9fafb; padding: 4rem 1rem;">
+            <div class="container">
+                <h2 class="section-title">Suggested Products</h2>
+                <p style="text-align: center; color: #6b7280; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Based on your browsing history, you might also like these products
+                </p>
+                <div class="products-grid">
+                    <!-- Suggested Product 1 -->
+                    <article class="card product-card" role="listitem" data-product-id="mixmaster-pro-stand-mixer-suggested">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://www.sunbeam.ca/on/demandware.static/-/Sites-master-catalog/default/dw91051df5/images/highres/2379-33A-1.jpg" alt="MixMaster Pro Stand Mixer">
+                            <span class="product-badge" style="background: #10b981;">Popular</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">MixMaster Pro Stand Mixer</h3>
+                            <p class="product-description">Professional stand mixer with 10-speed control and multiple attachments for all your baking needs</p>
+                            <div class="product-footer">
+                                <span class="product-price">£399.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Suggested Product 2 -->
+                    <article class="card product-card" role="listitem" data-product-id="wavetech-microwave-suggested">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=400&h=400&fit=crop" alt="WaveTech Microwave">
+                            <span class="product-badge" style="background: #ef4444;">-30%</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Kitchen</span>
+                            <h3 class="product-name">WaveTech Microwave</h3>
+                            <p class="product-description">Smart microwave with sensor cooking and convection technology for perfect results every time</p>
+                            <div class="product-footer">
+                                <div>
+                                    <span class="product-price">£174.99</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #9ca3af; font-size: 0.75rem; margin-left: 0.5rem;">£249.99</span>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Suggested Product 3 -->
+                    <article class="card product-card" role="listitem" data-product-id="steamclean-pro-suggested">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=400&fit=crop" alt="SteamClean Pro">
+                            <span class="product-badge" style="background: #10b981;">New</span>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Cleaning</span>
+                            <h3 class="product-name">SteamClean Pro</h3>
+                            <p class="product-description">High-pressure steam cleaner for deep sanitization and cleaning without chemicals</p>
+                            <div class="product-footer">
+                                <span class="product-price">£199.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Suggested Product 4 -->
+                    <article class="card product-card" role="listitem" data-product-id="coolbreeze-tower-fan-suggested">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop" alt="CoolBreeze Tower Fan">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Heating & Cooling</span>
+                            <h3 class="product-name">CoolBreeze Tower Fan</h3>
+                            <p class="product-description">Oscillating tower fan with remote control and timer function for optimal comfort</p>
+                            <div class="product-footer">
+                                <span class="product-price">£89.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Suggested Product 5 -->
+                    <article class="card product-card" role="listitem" data-product-id="trimpro-electric-trimmer-suggested">
+                        <a href="product-detail.html" class="product-image">
+                            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=400&h=400&fit=crop" alt="TrimPro Electric Trimmer">
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Personal Care</span>
+                            <h3 class="product-name">TrimPro Electric Trimmer</h3>
+                            <p class="product-description">Cordless electric trimmer with multiple length settings and waterproof design</p>
+                            <div class="product-footer">
+                                <span class="product-price">£79.99</span>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-cart-btn" aria-label="Add to cart">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <circle cx="9" cy="21" r="1"></circle>
+                                            <circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        // Update product detail links with IDs
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.product-card a[href="product-detail.html"]').forEach(link => {
+                const card = link.closest('.product-card');
+                const productId = card.getAttribute('data-product-id');
+                if (productId) {
+                    // Map string IDs to numeric IDs for products that have them
+                    const idMap = {
+                        'smartchef-pro-oven': '1',
+                        'ultraclean-pro-vacuum': '2',
+                        'airpure-climate-station': '3',
+                        'pressopro-espresso-machine': '4',
+                        'chillmaster-refrigerator': '9',
+                        'washmax-pro-washing-machine': '10',
+                        'mixmaster-pro-stand-mixer': '5',
+                        'wavetech-microwave': '6',
+                        'steamclean-pro': '7',
+                        'trimpro-electric-trimmer': '8'
+                    };
+                    const numericId = idMap[productId] || productId;
+                    link.href = `product-detail.html?id=${numericId}`;
+                }
+            });
+        });
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-group input').forEach(input => {
+            input.addEventListener('change', applyFilters);
+        });
+
+        function applyFilters() {
+            const priceFilter = document.querySelector('input[name="price"]:checked')?.value;
+            const sizeFilters = Array.from(document.querySelectorAll('#size-compact, #size-medium, #size-large, #size-extra-large')).filter(cb => cb.checked).map(cb => cb.value);
+            const qualityFilters = Array.from(document.querySelectorAll('#quality-premium, #quality-standard, #quality-budget')).filter(cb => cb.checked).map(cb => cb.value);
+            
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                let show = true;
+                const priceText = product.querySelector('.product-price')?.textContent || '';
+                const priceValue = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+                
+                // Price filter
+                if (priceFilter && priceFilter !== 'all') {
+                    const [min, max] = priceFilter.split('-').map(p => parseFloat(p));
+                    if (priceValue < min || (max && priceValue > max)) {
+                        show = false;
+                    }
+                }
+                
+                if (show) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function clearFilters() {
+            document.querySelectorAll('.filter-group input').forEach(input => {
+                if (input.type === 'radio') {
+                    input.checked = input.value === 'all';
+                } else {
+                    input.checked = false;
+                }
+            });
+            document.querySelectorAll('.product-card').forEach(product => {
+                product.style.display = '';
+            });
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>TechHouse</span>
+                </div>
+                <p>Innovating home solutions since 1995. High-quality appliances backed by our 2-year guarantee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html#membership">Membership</a></li>
+                    <li><a href="stores.html">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="policies.html">Warranty & Returns</a></li>
+                    <li><a href="faq.html">Shipping FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
